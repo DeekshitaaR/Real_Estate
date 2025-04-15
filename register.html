@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      
+        .hero {
+            background: url('bg.avif2') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .property-card {
+            transition: transform 0.3s;
+        }
+        .property-card:hover {
+            transform: scale(1.05);
+        }
+        .dropdown-submenu {
+            position: relative;
+        }
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: 0;
+            display: none;
+            position: absolute;
+        }
+        .dropdown-submenu:hover > .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu .dropdown-item {
+            white-space: nowrap;
+        }
+        .modal-content {
+            border-radius: 10px;
+        }
+        .nav-tabs .nav-link {
+            font-weight: bold;
+            color: #000;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #007bff;
+            color: white;
+        }
+        body{
+            background-image: url(newregister.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .temp {
+            width: 400px;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color:white;
+            justify-content: center;
+            padding-left: 3px;
+            border-radius: 5px;
+        }
+
+    
+        h2{
+            color: #A67B5B;
+        }
+
+        form, label, input {
+            display: block;
+            width: 95%;
+            margin-bottom: 10px;
+        }
+    
+        button {
+            width: 30%;
+            padding: 8px;
+            background-color: #A67B5B;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6F4E37;
+        }
+
+        input:focus {
+            border-color: #ECB176;
+            outline: none;
+        }
+
+        .tooltip {
+            position: absolute;
+            background-color: #A67B5B;
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
+            display: none;
+            font-size: 12px;
+            width: 20%;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="pro.html">Real Estate</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sellDropdown" role="button" data-bs-toggle="dropdown">Sell</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">House</a></li>
+                            <li><a class="dropdown-item" href="#">Property</a></li>
+                            <li><a class="dropdown-item" href="#">Land</a></li>
+                            <li><a class="dropdown-item" href="#">Appartment</a></li>
+                            <li><a class="dropdown-item" href="#">Flat</a></li>
+                            <li><a class="dropdown-item" href="#">Commercial</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#"id="buyDropdown" role="button" data-bs-toggle="dropdown">Buy</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">House</a></li>
+                        <li><a class="dropdown-item" href="#">Property</a></li>
+                        <li><a class="dropdown-item" href="#">Land</a></li>
+                        <li><a class="dropdown-item" href="#">Appartment</a></li>
+                        <li><a class="dropdown-item" href="#">Flat</a></li>
+                        <li><a class="dropdown-item" href="#">Commercial</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#"id="buyDropdown" role="button" data-bs-toggle="dropdown">Rent</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">House</a></li>
+                        <li><a class="dropdown-item" href="#">Appartment</a></li>
+                        <li><a class="dropdown-item" href="#">Commercial</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="areaDropdown" role="button" data-bs-toggle="dropdown">Area/Cities</a>
+                      <ul class="dropdown-menu">
+                          <li class="dropdown-submenu">
+                              <a class="dropdown-item dropdown-toggle" href="#">North</a>
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Chennai</a></li>
+                                  <li><a class="dropdown-item" href="#">Tiruvallur</a></li>
+                                  <li><a class="dropdown-item" href="#">Vellore</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown-submenu">
+                              <a class="dropdown-item dropdown-toggle" href="#">South</a>
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Madurai</a></li>
+                                  <li><a class="dropdown-item" href="#">Tirunelveli</a></li>
+                                  <li><a class="dropdown-item" href="#">Kanyakumari</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown-submenu">
+                              <a class="dropdown-item dropdown-toggle" href="#">East</a>
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Nagapattinam</a></li>
+                                  <li><a class="dropdown-item" href="#">Cuddalore</a></li>
+                                  <li><a class="dropdown-item" href="#">Villupuram</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown-submenu">
+                              <a class="dropdown-item dropdown-toggle" href="#">West</a>
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Coimbatore</a></li>
+                                  <li><a class="dropdown-item" href="#">Erode</a></li>
+                                  <li><a class="dropdown-item" href="#">Salem</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Properties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#createListingModal">Create Listing</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <form id="signup" action="upload.php" method="POST" enctype="multipart/form-data">
+            <h2><b>New Account Creation</b></h2>
+            <label><h4>Name</label></h4></label>
+            <input type="text" id="name" onblur="validateField(this)" onmouseover="showTooltip(this, 'Enter your full name')">
+            <span id="name-error" class="error-message"></span>
+            <label><h4>Phone Number</h4></label>
+            <input type="tel" id="num" onblur="validateField(this)" onmouseover="showTooltip(this, 'Enter your contact number')">
+            <span id="num-error" class="error-message"></span>
+            <label><h4>Email</h4></label>
+            <input type="email" id="email" onblur="validateField(this)" onmouseover="showTooltip(this, 'Enter your email id')">
+            <span id="email-error" class="error-message"></span>
+            <label><h4>Password</h4></label>
+            <input type="password" id="pwd" onblur="validateField(this)" onmouseover="showTooltip(this, 'Set a password')">
+            <span id="pwd-error" class="error-message"></span>
+            <label><h4>Select Role</h4></label>
+            <select id="Type">
+                <option value="" disabled selected>Choose an option</option>
+                <option value="buyer">Buyer</option>
+                <option value="agent">Agent</option>
+            </select>
+            <span id="Type-error" class="error-message"></span>
+            <br><br>
+            <label><h4>Profile picture</h4></label>
+            <input type="file" id="profile_pic" name="profile_pic" accept="image/*">
+            <label><h4>ID Proof</h4></label>
+            <input type="file" id="gov_id" name="gov_id" accept="image/*,application/pdf"><br>
+            <button type="submit" onclick="validation(event)">Submit</button>
+            <br><br>
+        </form>
+    </div>
+    <div id="tooltip" class="tooltip"></div>
+    <script>
+        function validateField(input) {
+            const value = input.value.trim();
+            const fieldId = input.id;
+            const errorElement = document.getElementById(${fieldId}-error);
+            errorElement.textContent = '';
+            if (value === "") {
+                errorElement.textContent = "This field is required";  
+                input.style.borderColor = "#FF0000";
+            } else {
+                input.style.borderColor = ""; 
+            }
+        }
+        function showTooltip(input, message) {
+            const tooltip = document.getElementById("tooltip");
+            tooltip.textContent = message;
+
+            const rect = input.getBoundingClientRect();
+            tooltip.style.left = rect.left + "px";
+            tooltip.style.top = rect.bottom + "px";
+            tooltip.style.display = "block";
+
+            input.addEventListener("mouseout", function() {
+                tooltip.style.display = "none";
+            });
+        }
+        function validation(event){
+            event.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const phoneNumber = document.getElementById("num").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("pwd").value;
+            let isValid = true;
+            let error = "";
+            if (name === "") {
+                isValid = false;
+                error += "Name must not be empty.\n";
+            }
+
+            const emailFormat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (email === "" || !emailFormat.test(email)) {
+                isValid = false;
+                error += "Please enter a valid email address.\n";
+            }
+
+            const passwordPattern = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
+
+            if (password === "" || !passwordPattern.test(password)) {
+                isValid = false;
+                error += "Password must be at least 8 characters long, include an uppercase letter, a lowercase letter, a number, and a special character.";
+            }
+
+const contactFormat = /^[0-9]{10}$/;
+if (!contactFormat.test(phoneNumber)) {
+    isValid = false;
+    error += "A valid 10-digit contact number is required.\n";
+}
+
+if (!Type) {
+    isValid = false;
+    document.getElementById("Type-error").textContent = "Please select a role.";
+} else {
+    document.getElementById("Type-error").textContent = "";
+}
+
+if (isValid) {
+    alert("Successfully signed up");
+    document.getElementById("signup").reset();
+} else {
+    alert("Error:\n"+error);
+}
+}
+
+    </script>
+</body>
