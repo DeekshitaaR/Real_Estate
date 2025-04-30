@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sell Your Property - Real Estate Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .step {
+      background: white;
+      flex: 1 1 280px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .step:hover {
+      transform: translateY(-5px);
+    }
+    .step h3 {
+      margin-bottom: 15px;
+      color: #0d6efd;
+    }
+    .step p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    .cta {
+      margin-top: 80px;
+      background: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      border-radius: 12px;
+    }
+    .cta h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .cta a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: white;
+      color: #0d6efd;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .cta a:hover {
+      background: #003d99;
+      color: white;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .intro h2 {
+      font-size: 32px;
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+    .intro p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      background: #fdfdfd;
+      transition: 0.3s;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #0d6efd;
+      background: #fff;
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    input[type="file"] {
+      padding: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #0d6efd;
+      color: #fff;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #003d99;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>Sell Your Property</h1>
+  <p>Reach the right buyers faster and sell at the best value</p>
+</section>
+
+<div class="container">
+  <h2 style="text-align:center; margin-bottom: 50px;">Easy Steps to Sell with Us</h2>
+  <div class="steps">
+    <div class="step">
+      <h3>1. Free Property Evaluation</h3>
+      <p>Get a professional, no-obligation valuation to know your property's market worth.</p>
+    </div>
+    <div class="step">
+      <h3>2. Professional Listing</h3>
+      <p>We create stunning property listings with high-quality photos and detailed descriptions.</p>
+    </div>
+    <div class="step">
+      <h3>3. Marketing & Promotion</h3>
+      <p>Your property is promoted across top real estate sites and social media channels for maximum reach.</p>
+    </div>
+    <div class="step">
+      <h3>4. Hassle-Free Closing</h3>
+      <p>Our experts assist in negotiations, paperwork, and legal formalities for a smooth closing.</p>
+    </div>
+  </div>
+
+  <section class="cta">
+    <h2>Ready to Sell Your Property?</h2>
+    <p>Connect with our experts today and make your selling journey smooth and profitable.</p>
+    <a href="#">Get a Free Consultation</a>
+  </section>
+</div>
+
+<section class="content">
+  <div class="intro">
+    <h2>List Your Property for Sale</h2>
+    <p>Provide your property details below and our agents will contact you to get the best deal.</p>
+  </div>
+
+  <form>
+    <div class="form-group">
+      <label for="sellerName">Full Name *</label>
+      <input type="text" id="sellerName" name="sellerName" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="sellerEmail">Email Address *</label>
+      <input type="email" id="sellerEmail" name="sellerEmail" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="sellerPhone">Phone Number *</label>
+      <input type="tel" id="sellerPhone" name="sellerPhone" placeholder="Enter your phone number" required>
+    </div>
+
+    <div class="form-group">
+      <label for="propertyAddress">Property Address *</label>
+      <input type="text" id="propertyAddress" name="propertyAddress" placeholder="Street, City, State, ZIP" required>
+    </div>
+
+    <div class="form-group">
+      <label for="propertyType">Property Type *</label>
+      <select id="propertyType" name="propertyType" required>
+        <option value="">Select Property Type</option>
+        <option value="apartment">Apartment</option>
+        <option value="villa">Villa</option>
+        <option value="plot">Plot / Land</option>
+        <option value="commercial">Commercial Property</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="expectedPrice">Expected Price *</label>
+      <input type="text" id="expectedPrice" name="expectedPrice" placeholder="e.g. ₹1.5 Crores" required>
+    </div>
+
+    <div class="form-group">
+      <label for="photos">Upload Photos</label>
+      <input type="file" id="photos" name="photos" accept="image/*" multiple>
+    </div>
+
+    <div class="form-group">
+      <label for="comments">Additional Details</label>
+      <textarea id="comments" name="comments" placeholder="Any extra information about your property..."></textarea>
+    </div>
+
+    <button type="submit">Submit Listing</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 ListNBuy.com | Your trusted partner in real estate sales
+</footer>
+
+</body>
+</html>

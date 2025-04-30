@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real Estate Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #333;
+    }
+    .banner {
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .banner h1 {
+      font-size: 48px;
+      margin: 0;
+      z-index: 1;
+    }
+    .banner p {
+      font-size: 20px;
+      margin-top: 10px;
+      z-index: 1;
+    }
+    .section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .intro h2 {
+      font-size: 36px;
+      color: #0d6efd;
+      margin-bottom: 10px;
+    }
+    .intro p {
+      font-size: 16px;
+      color: #666;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .feature-box {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .feature-box:hover {
+      background: #0d6efd;
+      color: white;
+      transform: translateY(-5px);
+    }
+    .feature-box h3 {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+    .feature-box p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .cta {
+      background: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 70px;
+      border-radius: 12px;
+    }
+    .cta h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .cta a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 30px;
+      background: white;
+      color: #0d6efd;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .cta a:hover {
+      background: #003d99;
+      color: white;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .intro h2 {
+      font-size: 32px;
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+    .intro p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      background: #fdfdfd;
+      transition: 0.3s;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #0d6efd;
+      background: #fff;
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    input[type="file"] {
+      padding: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #0d6efd;
+      color: #fff;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #003d99;
+    }
+  </style>
+</head>
+<body>
+
+<section class="banner">
+  <h1>Find Your Perfect Rental</h1>
+  <p>Luxury apartments, cozy homes, flexible lease options</p>
+</section>
+
+<div class="section">
+  <div class="intro">
+    <h2>Why Rent With Us?</h2>
+    <p>Experience easy renting with handpicked properties, transparent pricing, and quick approvals.</p>
+  </div>
+
+  <div class="features">
+    <div class="feature-box">
+      <h3>Wide Selection</h3>
+      <p>Choose from luxury apartments, family homes, condos, and studios tailored to your needs.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Verified Listings</h3>
+      <p>All properties are personally verified for quality, safety, and fair pricing standards.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Flexible Terms</h3>
+      <p>Monthly, yearly, and customized lease plans to fit your lifestyle and budget.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Fast Process</h3>
+      <p>Quick application reviews and support to help you move into your dream rental faster.</p>
+    </div>
+  </div>
+
+  <section class="cta">
+    <h2>Start Your Rental Journey Today</h2>
+    <p>Browse available rentals and schedule viewings instantly.</p>
+    <a href="#">Explore Rentals</a>
+  </section>
+</div>
+
+<section class="content">
+  <div class="intro">
+    <h2>List Your Property for Rent</h2>
+    <p>Provide your property details below and our agents will contact you to get the best rental deal.</p>
+  </div>
+
+  <form>
+    <div class="form-group">
+      <label for="ownerName">Full Name *</label>
+      <input type="text" id="ownerName" name="ownerName" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="ownerEmail">Email Address *</label>
+      <input type="email" id="ownerEmail" name="ownerEmail" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="ownerPhone">Phone Number *</label>
+      <input type="tel" id="ownerPhone" name="ownerPhone" placeholder="Enter your phone number" required>
+    </div>
+
+    <div class="form-group">
+      <label for="propertyAddress">Property Address *</label>
+      <input type="text" id="propertyAddress" name="propertyAddress" placeholder="Street, City, State, ZIP" required>
+    </div>
+
+    <div class="form-group">
+      <label for="propertyType">Property Type *</label>
+      <select id="propertyType" name="propertyType" required>
+        <option value="">Select Property Type</option>
+        <option value="apartment">Apartment</option>
+        <option value="villa">Villa</option>
+        <option value="plot">Plot / Land</option>
+        <option value="commercial">Commercial Property</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="monthlyRent">Monthly Rent *</label>
+      <input type="text" id="monthlyRent" name="monthlyRent" placeholder="e.g. ₹30,000" required>
+    </div>
+
+    <div class="form-group">
+      <label for="photos">Upload Photos</label>
+      <input type="file" id="photos" name="photos" accept="image/*" multiple>
+    </div>
+
+    <div class="form-group">
+      <label for="comments">Additional Details</label>
+      <textarea id="comments" name="comments" placeholder="Any extra information about your property..."></textarea>
+    </div>
+
+    <button type="submit">Submit Listing</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 RealEstatePortal.com | Premium Rentals Made Simple
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buy Your Dream Home - Real Estate Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', 'Nunito', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 300px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    header h1 {
+      font-size: 48px;
+    }
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .intro h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #0d6efd;
+    }
+    .intro p {
+      font-size: 16px;
+      color: #555;
+    }
+    .info-blocks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+      justify-content: center;
+    }
+    .info-card {
+      flex: 1 1 300px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+    .info-card h3 {
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+    .info-card p {
+      font-size: 15px;
+      color: #555;
+    }
+    form {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: 800px;
+      margin: 50px auto 0;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      background: #fdfdfd;
+      transition: 0.3s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #0d6efd;
+      background: #fff;
+      outline: none;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    button {
+      margin-top: 20px;
+      background: #0d6efd;
+      color: #fff;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #003d99;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      padding: 30px;
+      margin-top: 60px;
+      background: #f8f8f8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Buy Properties</h1>
+  <p>Discover your perfect home or investment opportunity.</p>
+</header>
+
+<section>
+  <div class="intro">
+    <h2>Why Buy with Us?</h2>
+    <p>We make buying properties easy, transparent, and fully personalized for you.</p>
+  </div>
+
+  <div class="info-blocks">
+    <div class="info-card">
+      <h3>Wide Range of Listings</h3>
+      <p>Explore a large variety of apartments, villas, and commercial properties across cities.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>Verified Properties</h3>
+      <p>All properties are verified by our experts to ensure smooth and secure transactions.</p>
+    </div>
+
+    <div class="info-card">
+      <h3>Expert Assistance</h3>
+      <p>Our professional agents assist you through every step, from shortlisting to finalizing deals.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="intro">
+    <h2>Fill the Form Below</h2>
+    <p>Tell us what you're looking for, and our experts will reach out to you with the best options!</p>
+  </div>
+
+  <form>
+    <div class="form-group">
+      <label for="fullName">Full Name *</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+    </div>
+
+    <div class="form-group">
+      <label for="location">Preferred Location *</label>
+      <input type="text" id="location" name="location" placeholder="City / Area you're interested in" required>
+    </div>
+
+    <div class="form-group">
+      <label for="budget">Budget Range *</label>
+      <select id="budget" name="budget" required>
+        <option value="">Select Budget Range</option>
+        <option value="under50">Under ₹50 Lakhs</option>
+        <option value="50to100">₹50 Lakhs - ₹1 Crore</option>
+        <option value="100to200">₹1 Crore - ₹2 Crores</option>
+        <option value="above200">Above ₹2 Crores</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="propertyType">Property Type *</label>
+      <select id="propertyType" name="propertyType" required>
+        <option value="">Select Property Type</option>
+        <option value="apartment">Apartment</option>
+        <option value="villa">Villa</option>
+        <option value="plot">Plot / Land</option>
+        <option value="commercial">Commercial Property</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Additional Details</label>
+      <textarea id="message" name="message" placeholder="Tell us more about your preferences..."></textarea>
+    </div>
+
+    <button type="submit">Submit Request</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 RealEstatePortal.com | Turning Dreams into Addresses
+</footer>
+
+</body>
+</html>
